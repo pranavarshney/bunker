@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Oswald', sans-serif;
+    --font-mono: 'Share Tech Mono', monospace;
+    --font-typewriter: 'Courier Prime', monospace;
+  }
+
+  body {
+    font-family: var(--font-typewriter);
+    background-color: #0c100e;
+    color: #dde7df;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-tech {
+  font-family: var(--font-mono);
+}
+
+.font-typewriter {
+  font-family: var(--font-typewriter);
+}
+
+/* Post-Soviet peeling mint-green concrete wall texture */
+.bunker-wall {
+  background-color: #111815;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(122, 163, 137, 0.1) 0%, transparent 65%),
+    radial-gradient(circle at 14% 84%, rgba(74, 99, 85, 0.08) 0%, transparent 40%),
+    linear-gradient(180deg, rgba(25, 38, 32, 0.65) 0%, rgba(12, 17, 15, 0.96) 100%);
+}
+
+/* Industrial painted steel panel */
+.steel-panel {
+  background-color: #16201c;
+  border: 1px solid #2d3f36;
+  box-shadow: inset 0 1px 0 rgba(164, 198, 178, 0.07);
+}
+
+/* Recessed Soviet instrument bezel */
+.crt-bezel {
+  background-color: #0b0f0d;
+  border: 2px solid #2c3d34;
+  box-shadow:
+    inset 0 0 28px rgba(0, 0, 0, 0.85),
+    0 2px 0 rgba(162, 196, 176, 0.08);
+}
+
+/* Aged paper dossier ledger */
+.paper-ledger {
+  background-color: #e4decb;
+  color: #1d221c;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 23px,
+      rgba(55, 68, 56, 0.14) 24px
+    );
+}
+
+/* Subtle CRT scanlines overlay */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 22, 19, 0) 50%,
+    rgba(0, 0, 0, 0.24) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Overhead 50Hz fluorescent tube subtle flicker */
+@keyframes fluorescent-hum {
+  0%, 92%, 96%, 100% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.92;
+  }
+  95% {
+    opacity: 0.96;
+  }
+}
+
+.fluorescent-flicker {
+  animation: fluorescent-hum 7s infinite;
+}
+
+/* Hallucination text drift when sanity is critically low */
+@keyframes sanity-jitter {
+  0%, 90%, 100% {
+    transform: translate(0, 0);
+  }
+  92% {
+    transform: translate(-1px, 0.5px);
+  }
+  95% {
+    transform: translate(1px, -0.5px);
+  }
+}
+
+.low-sanity-jitter {
+  animation: sanity-jitter 3.2s infinite;
+}
+
+/* Falling radioactive ash drift */
+@keyframes ash-fall {
+  0% {
+    transform: translateY(-10%) translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateY(115%) translateX(18px);
+    opacity: 0;
+  }
+}
+
+.ash-particle {
+  animation: ash-fall linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fluorescent-flicker,
+  .low-sanity-jitter,
+  .ash-particle {
+    animation: none !important;
+  }
+}
+
+/* Custom dark industrial scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1310;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f4238;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #435e50;
+}

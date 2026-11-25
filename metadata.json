@@ -1,0 +1,6 @@
+{
+  "name": "Shelter B-04: The Chitin Fall",
+  "description": "A post-Soviet nuclear bunker survival and deduction game set in Krasnograd-9. Inspect 46 distinct visitors behind a fogged airlock window, detect Hollow mimics, manage scarce rations, and survive 10 days until extraction.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
